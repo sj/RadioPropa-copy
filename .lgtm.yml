@@ -1,0 +1,9 @@
+extraction:
+  cpp:
+    after_prepare:
+      - mkdir -p _lgtm_build/CMakeFiles/git-data
+      - echo "LGTM build" > _lgtm_build/CMakeFiles/git-data/head-ref
+    configure:
+      command:
+        - cd _lgtm_build
+        - cmake ..
